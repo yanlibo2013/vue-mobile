@@ -16,6 +16,7 @@ const router = new VueRouter({
 sync(store, router)
 
 router.beforeEach(function (to, from, next) {
+  window.document.title = to.meta.title;
 
   // if (to.meta.home) {
   //   to.meta.animation = 'animated zoomIn faster';//向右滑入动画

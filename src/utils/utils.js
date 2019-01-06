@@ -9,6 +9,7 @@
 
 // import JsEncrypt from './jsencrypt'
 import _ from "lodash";
+const store = require("store");
 export const setCookie = (name, value) => {
   var Days = 30;
   var exp = new Date();
@@ -893,4 +894,12 @@ export const luhnCheck = bankno => {
     // $("#banknoInfo").html("银行卡号必须符合luhn校验");
     return false;
   }
+};
+
+export const setSession = data => {
+  return store.set(data.key, data.value);
+};
+
+export const getSession = data => {
+  return store.set(data.key);
 };

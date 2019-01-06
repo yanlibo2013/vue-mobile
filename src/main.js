@@ -17,6 +17,8 @@ if (mock) {
 import 'vux/src/styles/reset.less'
 import '@/styles/index.less'
 
+import '@/styles/flex-grid/flex-grid-lite.css';
+
 FastClick.attach(document.body);
 
 Vue.use(ToastPlugin)

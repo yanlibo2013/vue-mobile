@@ -1,9 +1,11 @@
-
 const Home = resolve => require(["@/views/home/home"], resolve);
 // const Health = resolve => require(["@/views/home/health/health"], resolve);
 const Pay = resolve => require(["@/views/home/pay/index"], resolve);
 const Form = resolve => require(["@/views/home/form/index"], resolve);
 const Result = resolve => require(["@/views/home/result"], resolve);
+
+const Flex = resolve => require(["@/components/flex/index"], resolve);
+const ak = resolve => require(["@/views/ak/index"], resolve);
 
 export default [
   {
@@ -32,6 +34,23 @@ export default [
       isback: false
     }
   },
+
+  {
+    path: "/flex",
+    name: "Flex",
+    component: Flex,
+    meta: {
+      title: "flex"
+    }
+  },
+  {
+    path: "/ak",
+    component: ak,
+    name: "ak",
+    meta: {
+      title: "ak"
+    }
+  },
   // {
   //   path: "/health",
   //   name: "Home",
@@ -58,5 +77,5 @@ export default [
       home: true,
       isback: false
     }
-  },
+  }
 ];
