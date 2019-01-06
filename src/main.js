@@ -36,15 +36,7 @@ import {
   Checker,
   CheckerItem
 } from "vux";
-import VueGrid from "@liqueflies/vue-flex-grid";
-import { $http } from "./utils/ak/http";
 
-const mock = process.env.USER_MOCK;
-if (mock) {
-  require("@/mock");
-}
-
-import "vux/src/styles/reset.less";
 import "@/styles/index.less";
 
 import "@/styles/flex-grid/flex-grid-lite.css";
@@ -53,11 +45,9 @@ FastClick.attach(document.body);
 
 Vue.use(ToastPlugin);
 Vue.use(AlertPlugin);
-Vue.use(VueGrid);
 Vue.use(LoadingPlugin)
 
 Vue.config.productionTip = false;
-Vue.prototype.$http = $http;
 new Vue({
   el: "#app",
   router,

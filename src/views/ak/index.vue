@@ -1,12 +1,13 @@
 <template>
   <div>
-    <vheader ></vheader>
+    <vheader></vheader>
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from "vuex";
 import vheader from "@/components/header/index.vue";
+import { ak } from "@/service/index";
 export default {
   name: "ak",
   components: {
@@ -19,13 +20,11 @@ export default {
         text: "加载中..."
       });
 
-      let data = {
+      ak.getList({
         userId: "6e6fcf4f572313ff7091972944dc77dc",
         currentPage: 1,
         pagesize: 10
-      };
-
-      this.$http.post2("100171", data).then(res => {
+      }).then(res => {
         this.$vux.loading.hide();
 
         if (res.data.head.errorCode === "0000") {

@@ -1,52 +1,38 @@
 <template>
-<div id="app" ref="app">
-    <!-- <div v-transfer-dom>
-        <loading v-model="isLoading"></loading>
-    </div> -->
-
+  <div id="app" ref="app">
     <transition :enter-active-class="$route.meta.animation">
-        <router-view></router-view>
+      <router-view></router-view>
     </transition>
-</div>
+  </div>
 </template>
 
 <script>
-import {
-    Loading,
-    TransferDom
-} from 'vux'
-import {
-    mapState
-} from 'vuex'
-import OverPull from '@/utils/overPull'
+import { Loading, TransferDom } from "vux";
+import { mapState } from "vuex";
 
 export default {
-    directives: {
-        TransferDom
-    },
-    components: {
-        Loading,
-
-    },
-    computed: {
-        ...mapState({
-            isLoading: state => state.vux.isLoading
-        })
-    },
-    created() {
-        OverPull.init();
-    }
-}
+  directives: {
+    TransferDom
+  },
+  components: {
+    Loading
+  },
+  computed: {
+    ...mapState({
+      isLoading: state => state.vux.isLoading
+    })
+  },
+  created() {}
+};
 </script>
 
 <style lang="less">
 #app {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    background: #FFFFFF
-  }
-
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #ffffff;
+}
 </style>
