@@ -170,6 +170,15 @@ export const getWindowHeight = document => {
   return windowHeight;
 };
 
+
+
+/**
+ * 获取指定的URL参数值
+ * URL:http://www.quwan.com/index?name=tyler
+ * 参数：paramName URL参数
+ * 调用方法:getParam("name")
+ * 返回值:tyler
+ */
 export const getParam = paramName => {
   // paramValue = "", isFound = !1;
   // if (this.location.search.indexOf("?") == 0 && this.location.search.indexOf("=") > 1) {

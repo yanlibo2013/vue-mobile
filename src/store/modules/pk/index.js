@@ -1,8 +1,10 @@
 import { pk } from '../../mutation-types/index';
 
+console.log(pk.GET_AD_VIEW);
+
 const history = {
   state: {
-    historyProductInfo: {},
+    historyProductInfo1: {},
     analyseProduct:"",
     // searchProduct1:"",
     // searchProduct2:"",
@@ -10,7 +12,7 @@ const history = {
   },
   mutations: {
     [pk.GET_AD_VIEW](state, data){
-      state.historyProductInfo = data;
+      state.historyProductInfo1 = data;
     },
     [pk.SET_pk_PARAM](state, data){
       state.param = data;
@@ -19,3 +21,11 @@ const history = {
 }
 
 export default history;
+
+
+
+// export default {
+//   [pk.GET_AD_VIEW](state, data){
+//     state.historyProductInfo = data;
+//   },
+// }

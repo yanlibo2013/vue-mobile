@@ -1,5 +1,5 @@
-import pk from "./pk/index"
+import pk from "./pk/index";
 
 export default {
     pk
-};
+}

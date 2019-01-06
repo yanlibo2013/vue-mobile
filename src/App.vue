@@ -1,8 +1,8 @@
 <template>
 <div id="app" ref="app">
-    <div v-transfer-dom>
+    <!-- <div v-transfer-dom>
         <loading v-model="isLoading"></loading>
-    </div>
+    </div> -->
 
     <transition :enter-active-class="$route.meta.animation">
         <router-view></router-view>
