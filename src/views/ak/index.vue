@@ -1,6 +1,6 @@
 <template>
   <div>
-    <vheader></vheader>
+    <vheader ></vheader>
   </div>
 </template>
 

@@ -9,7 +9,7 @@
 
 // import JsEncrypt from './jsencrypt'
 import _ from "lodash";
-const store = require("store");
+let store = require("store");
 export const setCookie = (name, value) => {
   var Days = 30;
   var exp = new Date();
@@ -169,8 +169,6 @@ export const getWindowHeight = document => {
   }
   return windowHeight;
 };
-
-
 
 /**
  * 获取指定的URL参数值
@@ -906,9 +904,21 @@ export const luhnCheck = bankno => {
 };
 
 export const setSession = data => {
-  return store.set(data.key, data.value);
+  store.set(data.key, data.value);
+  // store.set(data.key, data.value);
 };
 
 export const getSession = data => {
-  return store.set(data.key);
+  return store.get(data.key);
+  //store.get(data.key);
+};
+
+export const remvoeSession = data => {
+  //return store.get(data.key);
+  store.remove(data.key);
+};
+
+export const clearAllSession = () => {
+  //return store.clearAll();
+  store.clearAll();
 };
